@@ -1,5 +1,5 @@
 const router = require('./router/index.js')
-
+const port = process.env.PORT || 5000
 const express = require('express')
 const server = express()
 
@@ -11,6 +11,6 @@ server.get("/", (req, res) => {
 
 server.use('/api/posts', router)
 
-server.listen(5000, () => {
+server.listen(port, () => {
     console.log("Server started on port 5000")
 })
